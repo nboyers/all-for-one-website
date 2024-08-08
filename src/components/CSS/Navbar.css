@@ -1,0 +1,282 @@
+/* Navbar.css */
+:root {
+  --blue1: #003366; /* Darker blue */
+  --orange1: #FF6F61;
+  --teal2: #20B2AA;
+  --teal4: #008080;
+  --white: #FFFFFF;
+  --nav-height: 60px;
+  --max-desktop: 1200px;
+  --mono: 'Courier New', Courier, monospace;
+  --blue4: #1E90FF;
+  --gradient: linear-gradient(90deg, var(--blue1) -10%, var(--orange1) 21%, var(--blue1) 93%);
+}
+
+/* General Navbar Styles */
+.Nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  min-height: var(--nav-height);
+  display: flex;
+  flex-direction: column;
+  background: var(--teal2);
+}
+
+.Nav-inner {
+  max-width: var(--max-desktop);
+  margin: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  position: relative;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .Nav-inner {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.Nav-wrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+.Nav-logo {
+  width: auto;
+  height: var(--nav-height); /* Set the logo height to align with the navbar */
+  display: flex;
+  align-items: center;
+}
+
+.Nav-logo img {
+  height: 100%; /* Make the logo image fit within the navbar height */
+  width: auto;
+}
+
+
+.Nav-links {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none; /* Remove list dots */
+  margin-left: 4em; /* Move the links to the right */
+}
+
+
+.Nav-links-item {
+  margin: 0 2em;
+  transition: opacity .3s;
+}
+
+.Nav-links-item a {
+  font-weight: 600; /* Same weight for all links */
+  color: inherit;
+  text-decoration: none;
+}
+
+.Nav-subscribe-toggle {
+  font-family: var(--mono);
+  font-size: 16px;
+  letter-spacing: .5px;
+  line-height: 20px;
+  text-transform: uppercase;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-flex;
+  justify-self: start;
+  justify-content: center;
+  color: inherit;
+  text-decoration: none;
+  border: 0;
+  box-shadow: inset 0 0 0 2px var(--blue1);
+  padding: 1.05em 1.9em;
+  transition: color .25s;
+  position: relative;
+  vertical-align: middle;
+  margin-left: 8em; /* Added margin to move the button to the left */
+}
+
+.Nav-subscribe-toggle:before, .Nav-subscribe-toggle:after {
+  content: "";
+  position: absolute;
+  border: 2px solid transparent;
+  width: 0;
+  height: 0;
+}
+
+.Nav-subscribe-toggle:before {
+  top: 0;
+  left: 0;
+}
+
+.Nav-subscribe-toggle:after {
+  bottom: 0;
+  right: 0;
+}
+
+.Nav-subscribe-toggle:hover:before, .Nav-subscribe-toggle:hover:after,
+.Nav-subscribe-toggle:focus:before, .Nav-subscribe-toggle:focus:after {
+  width: 100%;
+  height: 100%;
+}
+
+.Nav-subscribe-toggle:hover:before, .Nav-subscribe-toggle:focus:before {
+  border-top-color: var(--blue4);
+  border-right-color: var(--blue4);
+  transition: width .25s ease-out, height .25s ease-out .25s;
+}
+
+.Nav-subscribe-toggle:hover:after, .Nav-subscribe-toggle:focus:after {
+  border-bottom-color: var(--blue4);
+  border-left-color: var(--blue4);
+  transition: border-color 0s ease-out .5s, width .25s ease-out .5s, height .25s ease-out .75s;
+}
+
+.Nav-subscribe-toggle:focus {
+  outline: 0;
+}
+
+.MobileNavToggle {
+  margin-left: auto;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  font-weight: 700;
+  position: relative;
+}
+
+.MobileNavToggle:focus {
+  outline: 2px solid var(--teal2);
+}
+
+/* Mobile Nav Styles */
+.MobileNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--teal4);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.MobileNav-top {
+  display: flex;
+  justify-content: space-between;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: var(--teal4);
+  padding: 1em 1rem;
+}
+
+@media (min-width: 768px) {
+  .MobileNav-top {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.MobileNav-close {
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+.MobileNav-close:focus {
+  outline: 2px solid var(--teal2);
+}
+
+.MobileNav-items {
+  color: var(--white);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 1em 0 2em;
+}
+
+@media (min-width: 768px) {
+  .MobileNav-items {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.MobileNav-items .AccordionItem-heading,
+.MobileNavItem-button,
+.MobileNavItem-link,
+.MobileNavItem-sublink {
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.MobileNav-items .AccordionItem-content ul {
+  display: grid;
+  grid-gap: 1em;
+  padding: 0 1em 1em;
+}
+
+.MobileNavItem-button, .MobileNavItem-link {
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid var(--teal2);
+  padding: 1em .5em;
+  color: inherit;
+}
+
+.MobileNavItem-button:hover, .MobileNavItem-link:hover,
+.MobileNavItem-button:focus, .MobileNavItem-link:focus {
+  color: var(--white);
+}
+
+.MobileNavItem-button {
+  background-color: transparent;
+  border: unset;
+  text-align: left;
+}
+
+.MobileNavItem-button:focus {
+  outline: 0;
+}
+
+.MobileNavItem-button:focus svg {
+  stroke: var(--teal2);
+}
+
+.MobileNavItem-button:focus svg * {
+  stroke: inherit;
+}
+
+.MobileNavItem-button-carrot {
+  width: .7rem;
+  transition: transform .3s;
+}
+
+.MobileNavItem-button--open .MobileNavItem-button-carrot {
+  transform: rotate(90deg);
+}
+
+.MobileNavItem-sublink {
+  font-weight: 400;
+  text-transform: unset;
+}
+
+.MobileNav-waves {
+  margin-left: auto;
+  margin-top: auto;
+  flex-shrink: 0;
+}
