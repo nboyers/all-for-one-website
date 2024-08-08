@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+# ALL FOR ONE
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the ALL FOR ONE nonprofit website. This project is a React application that includes various features to support the mission of the organization, including event management, information about the nonprofit's goals, a discussion board, and donation functionalities.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Getting Started](#getting-started)
+- [Running the Application](#running-the-application)
+- [Features](#features)
+- [Contributing](#contributing)
+- [License](#license)
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To get a local copy up and running, follow these simple steps.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+Ensure you have the following installed:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Node.js](https://nodejs.org/) (includes npm)
+- [Git](https://git-scm.com/)
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone https://github.com/nboyers/all-for-one.git
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Navigate to the project directory:
 
-### `npm run eject`
+```bash
+cd all-for-one
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Install dependencies:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Environment Variables
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Create a `.env` file in the root directory of the project and add the following environment variables:
 
-## Learn More
+```plaintext
+REACT_APP_CALENDAR_SRC=your_calendar_source_id@group.calendar.google.com
+REACT_APP_CALENDAR_HEIGHT=600
+REACT_APP_CALENDAR_WIDTH=800
+REACT_APP_CALENDAR_BG_COLOR=%23008080  # Teal background color
+REACT_APP_CALENDAR_TIMEZONE=America%2FNew_York
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Running the Application
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Start the development server:
 
-### Code Splitting
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### Analyzing the Bundle Size
+## Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The ALL FOR ONE website includes the following features:
 
-### Making a Progressive Web App
+### 1. Homepage
+The default landing page that provides an overview of the nonprofit's mission and recent activities.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 2. Calendar
+An embedded Google Calendar to manage and display upcoming events and important dates.
 
-### Advanced Configuration
+### 3. What We Stand For
+A section dedicated to explaining the values, mission, and goals of ALL FOR ONE.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### 4. Discussion Board
+A platform for community members to engage in discussions, share ideas, and collaborate on initiatives.
 
-### Deployment
+### 5. Speaker
+Information about guest speakers, their topics, and schedules for upcoming speaking events.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### 6. Volunteer Sign-Up
+A form for individuals to sign up and participate in volunteer activities organized by the nonprofit.
 
-### `npm run build` fails to minify
+### 7. Donations
+An integrated donation system powered by Stripe, allowing supporters to contribute financially to the organization's cause.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 8. Photos
+A gallery showcasing images from various events and activities hosted by ALL FOR ONE.
+
+### 9. Important Links
+A curated list of important resources and links relevant to the nonprofit's activities and community.
+
+### 10. Footer
+A footer with additional navigation and contact information.
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
